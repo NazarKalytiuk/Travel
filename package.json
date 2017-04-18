@@ -1,0 +1,16 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "Calendar for all events in KPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calendar",
+    "shedule",
+    "kpi"
+  ],
+  "author": "Nazar Kalytiuk",
+  "license": "ISC"
+}
