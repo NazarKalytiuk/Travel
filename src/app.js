@@ -1,10 +1,16 @@
 const express = require('express');
 const appRouter = require('./routers/app.router');
+const ApplicationDbContext = require('./domain/dbContext');
 
 
-const server = express();
-server.use(appRouter);
+(async() => {
+    const server = express();
+    server.use(appRouter);
 
-server.listen(3000, () => {
-    console.log('Server has been started');
-});
+    const db = await new ApplicationDbContext().connect();
+
+    console.log('db', db);
+    server.listen(3000, () => {
+        console.log('Server has been started');
+    });
+})();
