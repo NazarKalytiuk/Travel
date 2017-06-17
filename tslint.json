@@ -31,6 +31,9 @@
         "curly": true,
         "label-position": true,
         "no-arg": true,
+        "no-console": [
+            false
+        ],
         "no-conditional-assignment": true,
         "no-duplicate-super": true,
         "no-duplicate-variable": true,
