@@ -1,21 +1,16 @@
 import { Request, Response } from 'express';
-import { eventRepository } from '../repositories/event.repository';
+import * as express from 'express';
+import { userService } from '../../services/user.service';
 
-const get = async (req: Request, res: Response) => {
-    try {
-        const events = await eventRepository.getAll();
-        if (!events) {
-            res.sendStatus(404);
-        } else {
-            res.json(event);
-        }
-    } catch (error) {
-        res.sendStatus(500);
-    }
-};
+const router = express.Router();
 
-const eventController = {
-    get,
-};
+export async function eventController() {
+    const userS = await userService();
 
-export { eventController };
+    router.get('/', (req: Request, res: Response) => {
+        userS.register({username: 'username', password: 'pass123'});
+        res.json('sdq');
+    });
+
+    return router;
+}

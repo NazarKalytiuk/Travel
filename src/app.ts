@@ -1,10 +1,7 @@
-import * as express from 'express';
-import { Application, Router } from 'express';
-import { connect } from './domain/ApplicationDbContext';
+import { Server } from './server';
 
 (async () => {
-    const db = await connect();
-    const db2 = await connect();
-    const server: Application = express();
-
+    const server: Server = new Server();
+    await server.route();
+    server.listen();
 })();

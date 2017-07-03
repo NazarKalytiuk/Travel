@@ -1,40 +1,28 @@
 {
-  "name": "calendar",
-  "version": "0.0.1",
-  "description": "Calendar for all events in KPI",
-  "main": "src/app.js",
+  "name": "devchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch src/**/*.ts --exec ts-node src/app.ts",
-    "start-pm2": "pm2 start src/app.js --watch",
-    "stop-pm2": "pm2 stop src/app.js"
+    "start": "nodemon --watch src/**/*.ts --exec ts-node src/app.ts"
   },
-  "keywords": [
-    "calendar",
-    "shedule",
-    "kpi"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NazarKalytiuk/calendar.git"
-  },
-  "author": "Nazar Kalytiuk",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/body-parser": "^1.16.3",
-    "@types/express": "^4.0.35",
+    "@types/body-parser": "^1.16.4",
     "@types/mongodb": "^2.2.6",
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "mongodb": "^2.2.26"
+    "@types/underscore": "^1.8.1",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongodb": "^2.2.29",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "eslint": "^4.0.0",
-    "eslint-config-google": "^0.8.0",
     "nodemon": "^1.11.0",
-    "pm2": "^2.5.0",
-    "ts-node": "^3.0.6",
+    "ts-node": "^3.1.0",
     "typescript": "^2.3.4",
-    "webpack": "^2.4.1"
+    "webpack": "^3.0.0"
   }
 }
